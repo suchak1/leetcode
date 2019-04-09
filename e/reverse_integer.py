@@ -24,3 +24,5 @@ class Solution:
             return 0
         else:
             return y
+        
+        #40ms, 99.94%
