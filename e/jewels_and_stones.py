@@ -12,4 +12,5 @@ class Solution:
         
         return tot
         
+        #36ms, 99.66%
         
