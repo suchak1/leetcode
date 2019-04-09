@@ -16,3 +16,5 @@ class Solution:
         else:
             return 0 + self.rangeSumBST(root.left, L, R)
         
+        #232ms, 79.16%
+        
