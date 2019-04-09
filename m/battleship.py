@@ -26,3 +26,4 @@ class Solution:
 
         return ships
         
+        #40ms, 78.39%
