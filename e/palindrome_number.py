@@ -6,3 +6,5 @@ class Solution:
         """
         
         return str(x) == str(x)[::-1]
+
+        #80ms, 97.43%
