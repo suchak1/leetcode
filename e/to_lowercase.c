@@ -10,3 +10,6 @@ char* toLowerCase(char* str) {
     
     
 }
+
+
+//0ms, 100.00%
