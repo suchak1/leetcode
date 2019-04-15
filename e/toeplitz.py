@@ -1,7 +1,7 @@
 class Solution:
     def isToeplitzMatrix(self, matrix: List[List[int]]) -> bool:
         numRows = len(matrix)
-        numCols = len(matrix[0]) if numRows else 0
+        numCols = len(matrix[0])
         numDiags = numRows + numCols - 1
         
         def diag(start, matrix):
@@ -9,7 +9,7 @@ class Solution:
             y = start[1]
             val = matrix[x][y]
             
-            while x < len(matrix)-1 and y < len(matrix[0])-1:
+            while x < len(matrix) - 1 and y < len(matrix[0]) - 1:
                 x += 1
                 y += 1
                 
@@ -29,4 +29,4 @@ class Solution:
         
         return True
                 
-        #48s, 79.94%
+        #48ms, 79.94%
