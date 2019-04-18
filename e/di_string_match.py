@@ -4,12 +4,19 @@ class Solution:
         :type S: str
         :rtype: List[int]
         """
-        nums = list(range(len(S)+1))
+        left = 0
+        right = len(S)
+        result = []
         
-        result = [nums.pop() if letter == "D" else nums.pop(0) for letter in S]
+        for i in S:
+            if i == "D":
+                result.append(right)
+                right -= 1
+            else:
+                result.append(left)
+                left += 1
 
-        if len(nums):
-            result.append(nums.pop())
-     
+        result.append(left)
         return result
-        #104ms, 29.92%
+        
+        #88ms, 73.54%
