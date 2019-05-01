@@ -11,12 +11,11 @@ class Solution:
         for i, n in enumerate(nums):
             if nums[i-1] < n:
                 end = i + 1
-                if end-start > longest:
-                    longest = end-start
             else:
-                if end-start > longest:
-                    longest = end-start
                 start = i
+            
+            if end-start > longest:
+                    longest = end-start
         return longest
     
         # 44ms, 89.25%
