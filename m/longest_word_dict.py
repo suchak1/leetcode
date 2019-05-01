@@ -4,7 +4,7 @@ class Solution:
         lookup = {word:1 for word in words}
         maxWord = ""
         
-        for y, word in enumerate(words):
+        for word in words:
             if len(word) < len(maxWord):
                 continue 
                 
@@ -20,4 +20,4 @@ class Solution:
             
         return maxWord
             
-        # 100ms, 46.38%
+        # 96ms, 47.58%
