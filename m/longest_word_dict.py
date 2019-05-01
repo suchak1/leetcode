@@ -1,29 +1,23 @@
 class Solution:
     def longestWord(self, words: List[str]) -> str:
         
-        words.sort()
+        lookup = {word:1 for word in words}
         maxWord = ""
-        lookup = {}
         
-        for word in words:
-            lookup[word] = 1
-            
+        for y, word in enumerate(words):
             if len(word) < len(maxWord):
-                continue
+                continue 
                 
             prefix = ""
             
-            for i, x in enumerate(word):
+            for x in word:
                 prefix += x
-                if i == len(word) - 1:
-                    if len(word) > len(maxWord):
+                if prefix == word:
+                    if len(word) > len(maxWord) or (len(word) == len(maxWord) and word < maxWord):
                         maxWord = word
-                    break
-                if prefix in lookup:
-                    continue
-                else:
+                elif prefix not in lookup:
                     break
             
         return maxWord
             
-        # 132ms, 30.07%
+        # 100ms, 46.38%
