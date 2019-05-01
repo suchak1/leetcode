@@ -12,7 +12,7 @@ class Solution:
         else:
             maxDepth = count + 1
             for child in node.children:
-                currDepth = self.depth(child, count + 1) #if self.depth(child, count + 1) else 0 
+                currDepth = self.depth(child, count + 1)
                 if currDepth > maxDepth:
                     maxDepth = currDepth
             
