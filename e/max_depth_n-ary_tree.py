@@ -10,10 +10,15 @@ class Solution:
         if not node:
             return count
         else:
-            search = [self.depth(child, count + 1) for child in node.children]
-            return max(search) if search else count + 1
+            maxDepth = count + 1
+            for child in node.children:
+                currDepth = self.depth(child, count + 1) #if self.depth(child, count + 1) else 0 
+                if currDepth > maxDepth:
+                    maxDepth = currDepth
+            
+            return maxDepth
     
     def maxDepth(self, root: 'Node') -> int:
         return self.depth(root, 0)
-        
-        # 92ms, 48.20%
+
+        #88ms, 79.99%
